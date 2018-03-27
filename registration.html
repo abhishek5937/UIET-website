@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> Registration </title>
+      
+   <style type="text/css">
+      label{
+      display:inline-block;
+      width:150px;
+      margin-top:12px;
+      }
+      input[type=text],[type=password],select {
+      padding-right: 12px;
+      margin-top:12px;
+      width: 40%;
+      }
+      #register{
+      text-align:center;
+      padding:15px;
+      background-color: #4CAF50;
+      }
+   </style>
+
+   <script src="registration.js" LANGUAGE="JavaScript" type="text/javascript">
+</script>
+    <style>
+        #clock {
+            color: #FFFAF0;
+            font-size: 27px;
+            position: absolute;
+            top: 55px;
+            left: 45%;
+            background-color: #000000;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="dropdown.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
+    <script src="clock.js"></script>
+
+</head>
+
+<body bgcolor="#FFE4C4" onload="digclock()">
+
+    <h1 align="center"><font size="6"> UNIVERSITY INSTITUTE OF ENGINEERING & TECHNOLOGY </font>
+
+	<img src="images/Logo_of_UIET,Panjab_University.jpg" width="5%" align="left">
+	<img src="images/Logo_of_UIET,Panjab_University.jpg" width="5%" align="right">
+	<span id="clock"> </span>
+</h1>
+    <table bgcolor="#E9967A" align="center" width="100%">
+        <tr>
+            <th class="zoomin"><a href="dropdown.html">HOME</a></th>
+            <th class="zoomin">
+                <div class="dropdown">
+                    <span class="dropbtn"><u>DEPARTMENTS</u></span>
+                    <div class="dropdown-content">
+                        <a href="#">BIOTECHNOLOGY</a>
+                        <a href="#">COMPUTER SCIENCE & ENGINEERING</a>
+                        <a href="#">ELECTRONICS & COMMUNICATION ENGINEERING</a>
+                        <a href="#">ELECTRICAL & ELECTRONICS ENGINEERING</a>
+                        <a href="#">INFORMATION TECHNOLOGY</a>
+                        <a href="#">MECHANICAL ENGINEERING</a>
+                    </div>
+                </div>
+            </th>
+            <th class="zoomin">
+                <div class="dropdown">
+                    <span class="dropbtn"><u>ADMISSION</u></span>
+                    <div class="dropdown-content">
+                        <a href="#">JOINT ADMISSION 2016</a>
+                        <a href="#">ME/MTECH ADMISSION 2016</a>
+                        <a href="#">VISVESVARAYA PHD SCHEME</a>
+                    </div>
+                </div>
+            </th>
+            <th class="zoomin"><a href="list.html">PLACEMENTS</a></th>
+            <th class="zoomin"><a href="login.html">LOGIN</a></th>
+            <th class="zoomin"><a href="about.html">ABOUT US</a></th>
+        </tr>
+    </table>
+
+      <font size=4>
+      <h2><u>REGISTRATION FORM</u></h2>
+      <img src="images/fill.png" align="right" width="500px" height="420px">
+      <form name="form1" action="/action_page.php">
+         <label>First name*</label>
+         <input type="text" name="firstname" placeholder="Enter your first name" required><br>
+         <label>Last name</label>
+         <input type="text" name="lastname" placeholder="Enter your last name"><br>
+         <label>Roll Number*</label>
+         <input type="text" name="rollno" placeholder="Eg. UE158003" required><br>
+         <label>Branch*</label>
+         <select name="branch" required>
+            <option value="Select" selected>Select</option>
+            <option value="Biotech">Biotech</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="Mech">Mech</option>
+            <option value="IT">IT</option>
+         </select>
+         <br>
+         <label>Course*</label>
+         <select name="course" required>
+            <option value="Select" selected>Select</option>
+            <option value="BE">BE</option>
+            <option value="BE/MBA">BE/MBA</option>
+            <option value="ME">ME</option>
+            <option value="MTECH">MTECH</option>
+            <option value="PHD">PHD</option>
+         </select>
+         <br>
+         <label>Year*</label>
+         <select name="year" required>
+            <option value="Select" selected>Select</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+         </select>
+         <br>
+         <label>Category*</label>
+         Regular<input type="radio" name="category" value="Regular" checked>
+         Reappear<input type="radio" name="category" value="Reappear"><br>
+         <label>Gender*</label>
+         Male<input type="radio" name="gender" value="Male" checked> 
+         Female<input type="radio" name="gender" value="Female"> <br>
+         <label>Date of birth*</label>
+         <input type="date" name="dob" value="dd-mm-yyyy" required><br>
+         <label>Languages</label>
+         <input type="checkbox" name="language" value="English">English
+         <input type="checkbox" name="language" value="Hindi">Hindi
+         <input type="checkbox" name="language" value="Punjabi">Punjabi
+         <input type="checkbox" name="language" value="Russian">Russian
+         <input type="checkbox" name="language" value="French">French
+         <input type="checkbox" name="language" value="German">German<br>
+         <label>Username*</label>
+         <input type="text" name="username" placeholder="Enter username of your choice" required><br>
+         <label>Password*</label>
+         <input type="password" name="pwd" placeholder="Enter password (Must contain atleast 8 characters)" required><br>
+         <label>Profile Pic</label>
+         <input type="file" name="fileupload" accept="image/*" ><br>
+         <div id="register">
+            <button type="submit" onClick="display();">Register</button>
+            <button type="reset">Reset</button>
+         </div>
+      </form>
+   </body>
+</html>
